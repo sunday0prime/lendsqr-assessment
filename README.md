@@ -1,9 +1,12 @@
-# Getting Started with Create React App
+# LendSqr Assessment Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed as a solution to the lendsqr assessment which commenced on 7th of February.
+The project involves creating a typescript react app with scss.
 
-## Available Scripts
+## Starting the Application
 
+After cloning the project, 
+`cd` to the project directory.
 In the project directory, you can run:
 
 ### `npm start`
@@ -14,10 +17,21 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+This project also uses `react-router-dom` version 6 as a dependency.
+You can install it with
+`npm install react-router-dom@latest`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### App Structure
+
+The entrypoint of the app is index.tsx which load app.tsx first.
+All major routes are specified in App.tsx.
+
+The algorithm uses local storage to store if the user has been authenticated, else it would redirect to the login page.
+
+The type of data received from the api is defined in models.tsx as User.
+Api calls are based on the loaded component.
+Thus, the Dashboard component loads the /users endpoint,
+the UserSummary component loads the user/:id endpoint
 
 ### `npm run build`
 
@@ -39,8 +53,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Contact Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Email: sundayprime@gmail.com
+Github: sunday0prime
